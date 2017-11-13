@@ -3,6 +3,7 @@ package org.apxeolog.test;
 import static org.junit.Assert.*;
 
 import org.junit.Before;
+import org.junit.Ignore;
 import org.junit.Test;
 
 /**
@@ -29,5 +30,21 @@ public class LibraryTest {
         assertEquals(4, library.mul(2, 2));
         assertEquals(8, library.mul(4, 2));
         assertEquals(-4, library.mul(2, -2));
+    }
+
+    @Ignore
+    @Test
+    public void skipThisTest() {
+        assertEquals(4, library.mul(2, 2));
+    }
+
+    @Test
+    public void failingTest() throws Exception {
+        assertEquals(4, library.mul(3, 2));
+    }
+
+    @Test
+    public void exerciseTest() {
+        System.out.println("We are doing nothing here");
     }
 }
