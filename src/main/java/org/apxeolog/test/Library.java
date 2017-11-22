@@ -17,6 +17,20 @@ public class Library {
         return sum(a, b) - mul(a, b);
     }
 
+    public static void metricIssueOne(Object object) {
+        if (object == null) {
+            System.out.println("Big no-no");
+        }
+        System.out.println("Hashcode: " + object.hashCode());
+    }
+
+    public static void metricIssueTwo() {
+        Uncovered o1 = new Uncovered();
+        Uncovered o2 = new Uncovered();
+        boolean result = o1.equals(o2);
+        System.out.println("Result: " + result);
+    }
+
     public static void main(String args[]) {
         new Uncovered().justSomeGenericMethod();
     }
