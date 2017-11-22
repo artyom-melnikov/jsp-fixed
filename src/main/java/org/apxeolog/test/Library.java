@@ -27,7 +27,7 @@ public class Library {
     public static void metricIssueTwo() {
         Uncovered o1 = new Uncovered();
         Uncovered o2 = new Uncovered();
-        boolean result = o1.equals(o2);
+        boolean result = o1 == o2;
         System.out.println("Result: " + result);
     }
 
